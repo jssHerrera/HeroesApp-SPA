@@ -1,0 +1,104 @@
+.section__tile {
+  position: relative;
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.section__tile::before {
+  content: "";
+  position: absolute;
+  width: 6.7rem;
+  height: 0.1rem;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  background: var(--first-color);
+  margin: 0 auto;
+}
+.section__container {
+  max-width: 440px;
+  min-width: 150px;
+  width: 100%;
+  height: 25rem;
+  display: grid;
+  row-gap: 2rem;
+  margin: 0 auto;
+}
+.section__cart {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3rem 2rem;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+  overflow: hidden;
+}
+.section__cart:hover {
+  box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+}
+.section__tag {
+  background-color: var(--first-color);
+  padding: 0.8rem 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  position: absolute;
+  transform: rotate(-50deg);
+  left: -3rem;
+  top: -1rem;
+}
+.section__name,
+.section__email{
+  padding: .5rem .8rem;
+  font-size: 1.5rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+  border: 1px solid var(--text-color-light);
+  outline: none;
+}
+input[type="submit"] {
+  margin-top: 1rem;
+  width: 100px;
+  background: var(--body-color);
+  transition: .4s;
+}
+input[type="submit"]:hover {
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: var(--body-color);
+  background-color:var(--first-color) ;
+}
+
+.section__messages{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section__messages-error {
+display: block;
+font-family: monospace;
+white-space: nowrap;
+border-right: 4px solid;
+width: 23ch;
+
+animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+overflow:hidden;
+color: red;
+}
+
+@keyFrames typing {
+
+from { width: 0}
+}
+
+@keyFrames blink {
+ 50% { border-color: transparent}
+}
